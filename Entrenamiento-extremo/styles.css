@@ -1,0 +1,164 @@
+/* Fuente base del sitio */
+body {
+  font-family: Arial, sans-serif; /* Fuente legible y simple */
+  margin: 0; /* Quita márgenes por defecto */
+  padding: 0; /* Quita relleno por defecto */
+  background-color: #fff; /* Fondo blanco para modo claro */
+  color: #333; /* Texto gris oscuro */
+}
+
+/* Estilos para el encabezado */
+header {
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: space-between; /* Espacia los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  padding: 1rem; /* Espaciado interno */
+  background-color: #f5f5f5; /* Color de fondo del header */
+  position: sticky; /* Hace que el header se quede fijo arriba */
+  top: 0; /* Posición top */
+  z-index: 1000; /* Se asegura de estar por encima del resto */
+}
+
+/* Botón de hamburguesa (oculto en escritorio) */
+.hamburguesa {
+  display: none; /* Oculto en pantallas grandes */
+  font-size: 1.5rem; /* Tamaño del ícono */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia cursor al pasar */
+}
+
+/* Menú de navegación horizontal */
+.menu {
+  display: flex; /* Ítems en línea */
+  gap: 1rem; /* Espacio entre enlaces */
+}
+
+.menu a {
+  text-decoration: none; /* Quita subrayado */
+  color: #333; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Hero (sección destacada) */
+.hero {
+  background-image: url('/assets/cafe-fondo.jpg'); /* Imagen de fondo */
+  background-size: cover; /* Que la imagen cubra toda el área */
+  background-position: center; /* Centrado */
+  color: white; /* Texto blanco */
+  padding: 5rem 2rem; /* Espaciado interno */
+  text-align: center; /* Centrado de texto */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Tamaño grande para el título */
+}
+
+/* Sección de productos */
+.productos {
+  padding: 2rem; /* Espaciado alrededor */
+  background-color: #fafafa; /* Fondo gris muy claro */
+}
+
+.tarjetas-productos {
+  display: flex; /* Layout en línea */
+  flex-wrap: wrap; /* Permite que pasen a nueva línea */
+  gap: 1rem; /* Espacio entre tarjetas */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+.tarjeta {
+  background-color: white; /* Fondo blanco de cada tarjeta */
+  padding: 1rem; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 8px; /* Bordes redondeados */
+  max-width: 250px; /* Ancho máximo */
+  text-align: center; /* Texto centrado */
+}
+
+.tarjeta img {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  height: auto; /* Altura automática */
+  border-radius: 4px; /* Esquinas redondeadas */
+}
+
+/* Sección "Sobre nosotros" */
+#nosotros {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Sección de ubicación */
+#ubicacion {
+  padding: 2rem;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+#mapa {
+  margin: 1rem 0;
+}
+
+#mapa img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Formulario de reserva */
+#reserva {
+  padding: 2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Los campos van en columna */
+  max-width: 400px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+}
+
+form input,
+form button {
+  margin-bottom: 1rem; /* Espaciado entre campos */
+  padding: 0.5rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de letra */
+}
+
+form button {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+}
+
+/* RESPONSIVE: menú hamburguesa y ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Oculta menú en móvil si no hay JS */
+    flex-direction: column; /* Menú vertical si se mostrara */
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 100%; /* Aparece debajo del header */
+    left: 0;
+    width: 100%;
+  }
+
+  .hamburguesa {
+    display: block; /* Muestra botón hamburguesa */
+  }
+
+  .menu a {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+}
